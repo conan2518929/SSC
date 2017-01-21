@@ -27,11 +27,12 @@ public class MainActivity extends Activity {
 	private void init() {
 		webView = (WebView) findViewById(R.id.webView);
 		// WebView加载web资源
-		webView.loadUrl("http://115.29.114.92/bocai ");
+		webView.loadUrl("60.205.139.178");
 		// 覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开
 		WebSettings settings = webView.getSettings();
 		settings.setJavaScriptEnabled(true);
-		settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+		settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+		settings.setAppCacheEnabled(false); 
 		webView.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {

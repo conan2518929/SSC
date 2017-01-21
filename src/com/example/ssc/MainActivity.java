@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		dialog = new ProgressDialog(this);
-		dialog.setMessage("正在加载中...");
+		dialog.setMessage("正在加载中......");
 		init();
 	}
 
